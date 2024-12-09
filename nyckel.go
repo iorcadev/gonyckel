@@ -440,24 +440,6 @@ func (a *NyckelAPIDef) getNyckelResponseRaw(requestBody io.Reader, contentType s
 }
 
 //
-// Datafile
-//
-
-func readDataFile(path string) *DataFile {
-	fp, err := os.Open(path)
-	if err != nil {
-		panic(err)
-	}
-	defer fp.Close()
-	var df DataFile
-	dec := json.NewDecoder(fp)
-	if err := dec.Decode(&df); err != nil {
-		panic(err)
-	}
-	return &df
-}
-
-//
 // ErrNykel
 //
 
