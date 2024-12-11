@@ -40,6 +40,10 @@ type NyckelAPI interface {
 	AnnotateSample(funcId string, sampleId string, labelName string) (string, error)
 	AnnotateSampleId(funcId string, sampleId string, labelId string) (string, error)
 	InvokeFunction(funcId string, fileName string, capture bool, ourId string) (Invocation, error)
+
+	// control of the panic on error flag
+	PanicOnError()
+	NoPanicOnError()
 }
 
 //

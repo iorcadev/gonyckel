@@ -33,6 +33,17 @@ func NewErrNyckel(s string) *ErrNyckel {
 }
 
 //
+// Panic On Error Flag
+//
+
+func (a *NyckelAPIDef) PanicOnError() {
+	a.panicOnError = true
+}
+func (a *NyckelAPIDef) NoPanicOnError() {
+	a.panicOnError = false
+}
+
+//
 // Accesss Token
 //
 
