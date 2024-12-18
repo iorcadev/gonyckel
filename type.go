@@ -7,8 +7,8 @@ import (
 	"time"
 )
 
-var nyckelClientId = envVarOrPanic("NYKEL_CLIENT_ID")
-var nyckelClientSecret = envVarOrPanic("NYKEL_CLIENT_SECRET")
+var nyckelClientId = envVarOrPanic("NYCKEL_CLIENT_ID")
+var nyckelClientSecret = envVarOrPanic("NYCKEL_CLIENT_SECRET")
 
 const AccessTokenEndpoint = "https://www.nyckel.com/connect/token"
 const ListFunctionsEndpoint = "https://www.nyckel.com/v1/functions"
